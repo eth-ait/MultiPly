@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild">
+  <meta name="keywords" content="Vid2Avatar">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild</title>
+
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://jzr99.github.io">Zeren Jiang</a><sup>*1</sup>,</span>
+              <span class="author-block">
+              <a href="https://ait.ethz.ch/people/cheguo">Chen Guo</a><sup>*1</sup>,</span>
+              <span class="author-block">
+              <a href="https://ait.ethz.ch/people/kamanuel">Manuel Kaufmann</a><sup>1</sup>,</span>
+              <span class="author-block">
+              <a href="https://inf.ethz.ch/people/people-atoz/person-detail.MjUwNDAx.TGlzdC8zMDQsLTIxNDE4MTU0NjA=.html">Tianjian Jiang</a><sup>1</sup>,</span>
+              <span class="author-block">
+              <a href="https://scholar.google.co.uk/citations?user=pZPD0hMAAAAJ&hl=en">Julien Valentin</a><sup>2</sup>,</span>
+              <span class="author-block">
+              <a href="https://ait.ethz.ch/people/hilliges">Otmar Hilliges</a><sup>1</sup>,</span>
+              <span class="author-block">
+              <a href="https://ait.ethz.ch/people/song">Jie Song</a><sup>1</sup></span>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ETH Zürich,</span>
+            <span class="author-block"><sup>2</sup>Microsoft
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">CVPR 2024 (Oral)</span>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (coming soon)</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="./resource/CVPR2024_MultiPly_Supp_Doc.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-archive"></i>
+                  </span>
+                  <span>SuppMat</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/eth-ait/MultiPly"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soom)</span>
+                  </a>
+              </span>
+               <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (coming soon)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="./resource/teaser_v2_high.png"  class="center"/>
+      <h2 class="subtitle has-text-centered">
+        MultiPly, a novel framework to reconstruct multiple people in 3D from in-the-wild monocular videos
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present MultiPly, a novel framework to reconstruct multiple people in 3D from monocular in-the-wild videos. Reconstructing multiple individuals moving and interacting naturally from monocular in-the-wild videos poses a challenging task. Addressing it necessitates precise pixel-level disentanglement of individuals without any prior knowledge about the subjects. Moreover, it requires recovering intricate and complete 3D human shapes from short video sequences, intensifying the level of difficulty. To tackle these challenges, we first define a layered neural representation for the entire scene, composited by individual human and background models. We learn the layered neural representation from videos via our layer-wise differentiable volume rendering. This learning process is further enhanced by our hybrid instance segmentation approach which combines the self-supervised 3D segmentation and the promptable 2D segmentation module, yielding reliable instance segmentation supervision even under close human interaction. A confidence-guided optimization formulation is introduced to optimize the human poses and shape/appearance alternately. We incorporate effective objectives to refine human poses via photometric information and impose physically plausible constraints on human dynamics, leading to temporally consistent 3D reconstructions with high fidelity. The evaluation of our method shows the superiority over prior art on publicly available datasets and in-the-wild videos.
+        </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <!-- <video controls height="100%">
+            <source src="./resource/CVPR2024_MultiPly_Supp_Video.mp4"
+                    type="video/mp4">
+          </video> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/cmKLbKXVMek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="method">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Method</h2>
+    <img src="./resource/method_overview_v4_high.png"  height="250" class="center"/>
+    <p>
+      Given an image and SMPL estimation, we sample human points along the camera ray based on the bounding boxes of SMPL bodies and the background points based on NeRF++. We warp sampled human points into canonical space via inverse warping and evaluate the person-specific implicit network to obtain the SDF and radiance values. The layer-wise volume rendering is then applied to learn the implicit networks from images. We build a closed-loop refinement for instance segmentation by dynamically updating prompts for SAM using evolving human models. Finally, we formulate a confidence-guided optimization that only optimizes pose parameters for unreliable frames and jointly optimizes pose and implicit networks for reliable frames.
+    </p>
+
+
+  </div>
+</section>
+
+<section class="section" id="result">
+  <div class="container is-max-desktop content">
+    <!-- <h2 class="title">Result</h2>
+
+    <h3 class="title">Comparison</h3>
+    <p>
+      Our method generates complete human shapes with sharp boundaries and spatially coherent 3D reconstructions and outperforms existing state-of-the-art methods.
+    </p>
+
+     <div class="columns is-centered is-gapless">
+      <div class="column">
+        <div class="content">
+          <h4 class="title">Hi4D Dataset</h4>
+          <video autoplay controls muted loop height="100%">
+            <source src="./resource/compare_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <h4 class="title">MMM Dataset</h4>
+        <div class="columns is-centered">
+          <div class="column content">
+          <video autoplay controls muted loop height="100%">
+            <source src="./resource/compare_2.mp4"
+                    type="video/mp4">
+          </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h4 class="title">In-the-wild Videos</h4>
+        <div class="columns is-centered">
+          <div class="column content">
+          <video autoplay controls muted loop height="100%">
+            <source src="./resource/compare_3.mp4"
+                    type="video/mp4">
+          </video>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <h2 class="title">Result</h2>
+    <h3 class="title">Comparison</h3>
+    <p>
+      Our method generates complete human shapes with sharp boundaries and spatially coherent 3D reconstructions and outperforms existing state-of-the-art methods.
+    </p>
+    
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="1">
+          <div class="item item-steve">
+            <video poster="" controls muted loop height="100%">
+              <source src="./resource/compare_1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" controls muted loop height="100%">
+              <source src="./resource/compare_2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" controls muted loop height="100%">
+              <source src="./resource/compare_3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <h3 class="title">More Qualitative Results</h3>
+    <p>
+      Our method generalizes to various people with different human shapes and miscellaneous clothing styles and performs robustly against different levels of occlusions, close human interaction, and environmental visual complexities.
+    </p>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="3">
+          <div class="item item-steve">
+            <video poster="" controls muted loop height="100%">
+              <source src="./resource/taichi01_merged.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" controls muted loop height="100%">
+              <source src="./resource/dance5_merged.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" controls muted loop height="100%">
+              <source src="./resource/updown_merged.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" controls muted loop height="100%">
+              <source src="./resource/ale_merged.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" controls muted loop height="100%">
+              <source src="./resource/cat_merged.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h3 class="title">Mesh Visualization</h3>
+  <p>
+    The reconstructed 3D Mesh can be viewed from different angle.
+  </p>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="3">
+        <div class="item item-steve">
+          <video poster="" controls muted loop height="100%">
+            <source src="./resource/mesh_1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" controls muted loop height="100%">
+            <source src="./resource/mesh_2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" controls muted loop height="100%">
+            <source src="./resource/mesh_5.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" controls muted loop height="100%">
+            <source src="./resource/mesh_4.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" controls muted loop height="100%">
+            <source src="./resource/mesh_3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </div>
+</section>
+
+<section class="section" id="MMM Dataset">
+  <div class="container is-max-desktop content">
+    <h2 class="title">MMM Dataset</h2>
+    <p>
+      In order to evaluate the generalization of our method, we collect a dataset called Monocular Multi-huMan (MMM) by using a hand-held smartphone, which contains six sequences with two to four persons in each sequence. Half of the sequences are captured in the stage with ground truth annotations for quantitative evaluation and the others are captured in the wild for qualitative evaluation. More details and the download link for the dataset will be available soon.
+    </p>
+
+  </div>
+</section>
+
+<!-- <section class="section" id="Acknowledgment">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgment</h2>
+    <p>
+      Chen Guo was supported by Microsoft Research Swiss JRC Grant. Xu Chen was supported by the Max Planck ETH Center for Learning Systems. We thank Manuel Kaufmann and Juan Zarate for proofreading. We also thank Doriano van Essen for helping us with the SynWild dataset. We sincerely thank Marquese Scott for his amazing dancing videos!
+    </p>
+
+  </div>
+</section> -->
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{multiply,
+      title={MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild}, 
+      author={Jiang, Zeren and Guo, Chen and Kaufmann, Manuel and Jiang, Tianjian and Valentin, Julien and Hilliges, Otmar and Song, Jie},
+      year={2024},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+  }</code></pre>
+  </div>
+</section>
+
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="http://files.ait.ethz.ch/projects/vid2avatar/main.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/MoyGcc/vid2avatar" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This webpage is built with the template from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+</body>
+</html>
