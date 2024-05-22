@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild">
-  <meta name="keywords" content="Vid2Avatar">
+  <meta name="keywords" content="MultiPly">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild</title>
 
@@ -56,7 +56,8 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>ETH Zürich,</span>
-            <span class="author-block"><sup>2</sup>Microsoft
+            <span class="author-block"><sup>2</sup>Microsoft,</span>
+            <span class="author-block"><sup>*</sup>Equal Contribution
             </span>
           </div>
 
@@ -128,7 +129,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-        <img src="./resource/teaser_v2_high.png"  class="center"/>
+        <img src="http://files.ait.ethz.ch/projects/multiply/resource/teaser_v2_high.png"  class="center"/>
       <h2 class="subtitle has-text-centered">
         MultiPly, a novel framework to reconstruct multiple people in 3D from in-the-wild monocular videos
       </h2>
@@ -173,7 +174,7 @@
 <section class="section" id="method">
   <div class="container is-max-desktop content">
     <h2 class="title">Method</h2>
-    <img src="./resource/method_overview_v4_high.png"  height="250" class="center"/>
+    <img src="http://files.ait.ethz.ch/projects/multiply/resource/method_overview_v4_high.png"  height="250" class="center"/>
     <p>
       Given an image and SMPL estimation, we sample human points along the camera ray based on the bounding boxes of SMPL bodies and the background points based on NeRF++. We warp sampled human points into canonical space via inverse warping and evaluate the person-specific implicit network to obtain the SDF and radiance values. The layer-wise volume rendering is then applied to learn the implicit networks from images. We build a closed-loop refinement for instance segmentation by dynamically updating prompts for SAM using evolving human models. Finally, we formulate a confidence-guided optimization that only optimizes pose parameters for unreliable frames and jointly optimizes pose and implicit networks for reliable frames.
     </p>
@@ -239,17 +240,17 @@
         <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="1">
           <div class="item item-steve">
             <video poster="" controls muted loop height="100%">
-              <source src="./resource/compare_1.mp4" type="video/mp4">
+              <source src="http://files.ait.ethz.ch/projects/multiply/resource/compare_1.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-chair-tp">
             <video poster="" controls muted loop height="100%">
-              <source src="./resource/compare_2.mp4" type="video/mp4">
+              <source src="http://files.ait.ethz.ch/projects/multiply/resource/compare_2.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-chair-tp">
             <video poster="" controls muted loop height="100%">
-              <source src="./resource/compare_3.mp4" type="video/mp4">
+              <source src="http://files.ait.ethz.ch/projects/multiply/resource/compare_3.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -268,27 +269,27 @@
         <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="3">
           <div class="item item-steve">
             <video poster="" controls muted loop height="100%">
-              <source src="./resource/taichi01_merged.mp4" type="video/mp4">
+              <source src="http://files.ait.ethz.ch/projects/multiply/resource/taichi01_merged.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-chair-tp">
             <video poster="" controls muted loop height="100%">
-              <source src="./resource/dance5_merged.mp4" type="video/mp4">
+              <source src="http://files.ait.ethz.ch/projects/multiply/resource/dance5_merged.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-chair-tp">
             <video poster="" controls muted loop height="100%">
-              <source src="./resource/updown_merged.mp4" type="video/mp4">
+              <source src="http://files.ait.ethz.ch/projects/multiply/resource/updown_merged.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-chair-tp">
             <video poster="" controls muted loop height="100%">
-              <source src="./resource/ale_merged.mp4" type="video/mp4">
+              <source src="http://files.ait.ethz.ch/projects/multiply/resource/ale_merged.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-chair-tp">
             <video poster="" controls muted loop height="100%">
-              <source src="./resource/cat_merged.mp4" type="video/mp4">
+              <source src="http://files.ait.ethz.ch/projects/multiply/resource/cat_merged.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -307,27 +308,27 @@
       <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="3">
         <div class="item item-steve">
           <video poster="" controls muted loop height="100%">
-            <source src="./resource/mesh_1.mp4" type="video/mp4">
+            <source src="http://files.ait.ethz.ch/projects/multiply/resource/mesh_1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" controls muted loop height="100%">
-            <source src="./resource/mesh_2.mp4" type="video/mp4">
+            <source src="http://files.ait.ethz.ch/projects/multiply/resource/mesh_2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" controls muted loop height="100%">
-            <source src="./resource/mesh_5.mp4" type="video/mp4">
+            <source src="http://files.ait.ethz.ch/projects/multiply/resource/mesh_5.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" controls muted loop height="100%">
-            <source src="./resource/mesh_4.mp4" type="video/mp4">
+            <source src="http://files.ait.ethz.ch/projects/multiply/resource/mesh_4.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" controls muted loop height="100%">
-            <source src="./resource/mesh_3.mp4" type="video/mp4">
+            <source src="http://files.ait.ethz.ch/projects/multiply/resource/mesh_3.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -348,25 +349,25 @@
   </div>
 </section>
 
-<!-- <section class="section" id="Acknowledgment">
+<section class="section" id="Acknowledgment">
   <div class="container is-max-desktop content">
     <h2 class="title">Acknowledgment</h2>
     <p>
-      Chen Guo was supported by Microsoft Research Swiss JRC Grant. Xu Chen was supported by the Max Planck ETH Center for Learning Systems. We thank Manuel Kaufmann and Juan Zarate for proofreading. We also thank Doriano van Essen for helping us with the SynWild dataset. We sincerely thank Marquese Scott for his amazing dancing videos!
+      This work was partially supported by the Swiss SERI Consolidation Grant "AI-PERCEIVE". Chen Guo was supported by Microsoft Research Swiss JRC Grant. We thank Juan Zarate for proofreading. All experiments were performed on the ETH-Zürich Euler cluster!
     </p>
 
   </div>
-</section> -->
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{multiply,
+    <pre><code>@inproceedings{multiply,
       title={MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild}, 
       author={Jiang, Zeren and Guo, Chen and Kaufmann, Manuel and Jiang, Tianjian and Valentin, Julien and Hilliges, Otmar and Song, Jie},
-      year={2024},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      month     = {June},
+      year      = {2024},
   }</code></pre>
   </div>
 </section>
