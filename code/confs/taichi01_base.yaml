@@ -1,0 +1,13 @@
+hydra:
+    run:
+        dir: "outputs/${exp}/${run}"
+
+defaults:
+  - model: taichi01_model
+  - dataset: taichi01
+  - _self_
+
+seed: 42
+project_name: "VOLSDF_cam_norm"
+exp: ${dataset.train.dataset}
+run: ${dataset.train.subject}

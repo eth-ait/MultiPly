@@ -1,0 +1,29 @@
+smplx_models: "../code/lib/smpl/smpl_model/SMPL_NEUTRAL.pkl"
+
+# # Pytorch configuration.
+# device: "cuda:0"
+# f_precision: 32
+# i_precision: 64
+
+# # Camera.
+# znear: 0.01
+# zfar: 1000.0
+# camera_zoom_speed: 0.05
+
+# # Viewer.
+# window_width: 1600
+# window_height: 900
+# fullscreen: False
+# resizable: True
+# vsync: True 
+# export_dir: "../export"
+# playback_fps: 30 # 60
+# run_animations: False
+# draw_edges: False
+# flat_rendering: True # False
+# dark_mode: False # False
+# shadows_enabled: False #True
+# show_shadow_map: False
+# auto_set_floor: True
+# auto_set_camera_target: True
+# backface_culling: True

@@ -1,0 +1,56 @@
+train:
+    dataset: Hi4D
+    subject: "Hi4D_pair16_jump16_4"
+    start_frame: 0
+    end_frame: 90
+    batch_size: 1
+    drop_last: False
+    shuffle: True
+    worker: 8
+    num_person: 2
+    data_dir : pair16_jump16_vitpose_4/
+    num_sample : 512
+    using_SAM: True
+    edge_sampling: False
+    ratio_uncertain: 0.5 # the ratio of unreliable frames, the higher the ratio, the more uncertain frames
+
+valid:
+    dataset: "Hi4DVal"
+    subject: "Hi4D_pair16_jump16_4"
+    start_frame: 0
+    end_frame: 90
+    image_id: 0
+
+    batch_size: 1
+    drop_last: False
+    shuffle: False
+    worker: 8
+
+    data_dir : pair16_jump16_vitpose_4/
+    num_sample : -1
+    pixel_per_batch: 1024
+    using_SAM: True
+
+test:
+    dataset: "Hi4DTest"
+    subject: "Hi4D_pair16_jump16_4"
+    start_frame: 0
+    end_frame: 90
+    image_id: 0
+
+    batch_size: 1
+    drop_last: False
+    shuffle: False
+    worker: 0
+
+    data_dir : pair16_jump16_vitpose_4/
+    num_sample : 0
+    pixel_per_batch: 1024
+    using_SAM: True
+
+## novel view synthesis (to evaludate NVS, please use GT pose for training)
+#    novel_view: 88
+#    current_view: 4
+#    pair: 'pair16'
+#    action: 'jump16'
+#    GT_DIR: '/path_to_Hi4D_dataset'

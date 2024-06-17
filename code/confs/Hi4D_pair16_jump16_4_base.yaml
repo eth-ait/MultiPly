@@ -1,0 +1,13 @@
+hydra:
+    run:
+        dir: "outputs/${exp}/${run}"
+
+defaults:
+  - model: Hi4D_pair16_jump16_4_model
+  - dataset: Hi4D_pair16_jump16_4
+  - _self_
+
+seed: 42
+project_name: "VOLSDF_cam_norm"
+exp: ${dataset.train.dataset}
+run: ${dataset.train.subject}
