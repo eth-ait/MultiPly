@@ -3,7 +3,7 @@ env/
 *.DS_Store
 
 __pycache__/
-*.png
+# *.png
 *.ply
 *.npz
 *.npy

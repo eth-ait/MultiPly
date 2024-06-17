@@ -4,7 +4,7 @@
 
 Official Repository for CVPR 2024 paper [*MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild*](). 
 <p align="center">
-<img src="resources/teaser_v2_high.png" width="800" height="223"/> 
+<img src="resources/teaser.png" width="800" height="223"/> 
 </p>
 
 ## Getting Started
