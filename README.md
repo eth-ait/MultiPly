@@ -1,5 +1,6 @@
 # MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild
-## [Paper]() | [Video Youtube](https://youtu.be/cmKLbKXVMek) | [Project Page](https://jzr99.github.io/MultiPly/) | [MMM Data (Coming Soon)]()
+
+## [Paper](https://arxiv.org/pdf/2406.01595) | [Video Youtube](https://youtu.be/r9giQPUp1Gw) | [Project Page](https://eth-ait.github.io/MultiPly/) | [MMM Dataset](https://multiply.ait.ethz.ch/)
 
 
 Official Repository for CVPR 2024 paper [*MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild*](). 
@@ -8,7 +9,7 @@ Official Repository for CVPR 2024 paper [*MultiPly: Reconstruction of Multiple P
 </p>
 
 ## Getting Started
-* Clone this repo: `git clone https://github.com/jzr99/MultiPly`
+* Clone this repo: `git clone https://github.com/eth-ait/MultiPly`
 * Create a python virtual environment and activate. `conda create -n multiply python=3.7` and `conda activate multiply`
 * Install dependenices. `cd MultiPly`, `pip install -r requirement.txt` and `cd code; python setup.py develop`
 * Install [PyTorch3D](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md)
